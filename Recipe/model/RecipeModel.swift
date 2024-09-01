@@ -6,5 +6,5 @@ struct RecipeModel: Identifiable {
     let caloriesPer100Grams: Int
     let recipe: String
     let recipeImage: String
-    let recipeUrl: String
+    let recipeURL: String
 }
