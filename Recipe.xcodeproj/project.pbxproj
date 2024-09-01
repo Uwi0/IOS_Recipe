@@ -13,6 +13,7 @@
 		FBC23ECD2C83FFC700C9E70F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBC23ECC2C83FFC700C9E70F /* Preview Assets.xcassets */; };
 		FBC23ED72C84007C00C9E70F /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC23ED62C84007C00C9E70F /* RecipeModel.swift */; };
 		FBF830B42C840FAC00B44B02 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF830B32C840FAC00B44B02 /* RecipeViewModel.swift */; };
+		FBF830B62C8410CE00B44B02 /* RecipeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF830B52C8410CE00B44B02 /* RecipeItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FBC23ECC2C83FFC700C9E70F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FBC23ED62C84007C00C9E70F /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		FBF830B32C840FAC00B44B02 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		FBF830B52C8410CE00B44B02 /* RecipeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				FBC23EC62C83FFC600C9E70F /* RecipeView.swift */,
+				FBF830B52C8410CE00B44B02 /* RecipeItemView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBF830B42C840FAC00B44B02 /* RecipeViewModel.swift in Sources */,
+				FBF830B62C8410CE00B44B02 /* RecipeItemView.swift in Sources */,
 				FBC23EC72C83FFC600C9E70F /* RecipeView.swift in Sources */,
 				FBC23EC52C83FFC600C9E70F /* RecipeApp.swift in Sources */,
 				FBC23ED72C84007C00C9E70F /* RecipeModel.swift in Sources */,
