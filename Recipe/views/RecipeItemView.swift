@@ -7,6 +7,7 @@ struct RecipeItemView: View {
     let recipeImage: String
     
     let imgDim: CGFloat = 70
+    let imgRad: CGFloat = 10
     
     var body: some View {
         HStack {
@@ -21,7 +22,11 @@ struct RecipeItemView: View {
             Image(recipeImage)
                 .resizable()
                 .frame(width: imgDim, height: imgDim)
-                .cornerRadius(10)
+                .cornerRadius(imgRad)
+                .overlay(
+                    RoundedRectangle(cornerRadius: imgRad).stroke(.white, lineWidth: 1)
+                )
+                .shadow(color: .white.opacity(0.7), radius: 10, x: 0, y: 0)
         }
         .padding()
         .background(Color.black.cornerRadius(10))
