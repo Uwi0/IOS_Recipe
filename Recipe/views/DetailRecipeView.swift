@@ -20,7 +20,22 @@ struct DetailRecipeView: View {
                 Link(
                     destination: URL(string: recipeUrl)!,
                     label: {
-                        Image(imageName)
+                        ZStack {
+                            Image(imageName)
+                                .resizable()
+                                .scaledToFit()
+                                .cornerRadius(20.0)
+                                .scaleEffect(0.8)
+                            
+                            Text("Click image for recipe")
+                                .foregroundStyle(.orange)
+                                .font(.headline)
+                                .padding()
+                                .background(
+                                    Capsule()
+                                        .fill(.black.opacity(0.7))
+                                )
+                        }
                     }
                 )
             }
