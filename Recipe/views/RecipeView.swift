@@ -1,26 +1,28 @@
 import SwiftUI
 
-typealias LinkRecipe = NavigationLink<RecipeItemView, Text>
-
 struct RecipeView: View {
     
     @StateObject var recipeViewModel: RecipeViewModel = RecipeViewModel()
     
-    
-
-    
     var body: some View {
         NavigationView {
             List(self.recipeViewModel.recipeModels) { recipe in
-                NavigationLinkRecipes(recipe)
+                NavigationLinkRecipe(recipe)
             }.navigationTitle("Recipes")
         }
     }
     
-    private func NavigationLinkRecipes(_ recipe: RecipeModel) -> LinkRecipe {
+    private func NavigationLinkRecipe(
+        _ recipe: RecipeModel
+    ) -> NavigationLink<RecipeItemView, some View> {
         NavigationLink(
             destination: {
-                Text("Destination: Show Recipe \(recipe.name)")
+                DetailRecipeView(
+                    recipeDetail: recipe.recipe,
+                    imageName: recipe.recipeImage,
+                    recipeUrl: recipe.recipeURL
+                )
+                .navigationBarTitle("", displayMode: .inline)
             },
             label: {
                 RecipeItemView(
@@ -31,6 +33,7 @@ struct RecipeView: View {
             }
         )
     }
+    
 }
 
 #Preview {
